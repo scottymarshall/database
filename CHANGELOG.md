@@ -2,6 +2,9 @@
 
 This file is used to list changes made in each version of the database cookbook.
 
+## 6.1.2 (2017-06-07)
+- Allowed updating location of defaults file
+
 ## 6.1.1 (2016-11-01)
 - Fix incorrectly named matchers
 

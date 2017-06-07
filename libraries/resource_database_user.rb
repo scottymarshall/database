@@ -32,6 +32,7 @@ class Chef
         @privileges = [:all]
         @grant_option = false
         @require_ssl = false
+        @default_file = '/etc/my.cnf'
         @require_x509 = false
 
         @allowed_actions.push(:create, :drop, :grant, :revoke)
@@ -49,6 +50,22 @@ class Chef
       def username(arg = nil)
         set_or_return(
           :username,
+          arg,
+          kind_of: String
+        )
+      end
+
+      def username(arg = nil)
+        set_or_return(
+          :username,
+          arg,
+          kind_of: String
+        )
+      end
+      
+      def default_file(arg = nil)
+        set_or_return(
+          :default_file,
           arg,
           kind_of: String
         )
